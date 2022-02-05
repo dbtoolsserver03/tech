@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="shortcut icon" href="./images/log.jpg">
+<script>
+        localStorage.removeItem('saveKey');
+        function login() {
+            var inputName = document.getElementById("login")
+            localStorage.saveKey = inputName.value;
+            window.location.href = './homework検索.html';
+        }
+    </script>
+</head>
+<body>
+<div align="right">
+	ユーザー新規<br>
+</div>
+<div style="background-color: aqua;">
+	<table width="100%">
+	<tbody>
+		<tr>
+			<td width ="5%"></td>
+			<td width =25%>
+				<div align="right">
+					<img src="./images/im.jpg" width="60" height ="60" alt="">
+				</div>
+			</td>
+			<td width ="50%">
+			<p align="center" style="color: gray;">人事システム</p>
+			</td>
+			<td width="25%" align="right"></td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<div align="center">
+	<table border="1">
+		<tr>
+			<td>ログインID :</td>
+			<td><input id="login" type="text" style="background-color: silver;"></td>	
+		</tr>
+		<tr>
+			<td>パスワード :</td>
+			<td><input type="password" style="background-color: silver;"></td>
+		</tr>
+	</table>
+</div>
+<div align="center">
+    <button onclick="login()">登録</button>
+</div>
+
+</body>
+</html>

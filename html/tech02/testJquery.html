@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
+	<title>HTML教室Jquery</title>
+
+	<script src="./jquery-3.6.0.js"></script>
+	
+	<script type="text/javascript">
+	
+// 	alert(1);
+	
+		// 画面に全部のタグロード完了しましたら、
+		// すぐに、このメソッドを実行します。
+		$(document).ready(function(){
+// 			alert(2);
+				
+			//ボタンのクリックアクションを追加します。
+			  $("#id_btn").click(function(){
+				  
+				  // ボタンクリックしたら、下記ソースを実行します。
+				  //alert($("#id_user").val());
+				  
+				  // radio btn
+				　//var sexVal = $("input[name='nsex11']:checked").val();
+				  //alert(sexVal);
+				  // checkBox
+				  
+					var langObj  = $("input[name='lang']:checked");
+				  	var strLang="";
+				  	for(var i=0; i< langObj.length; i++) {
+				  		strLang=strLang+langObj[i].value;
+				  	}
+				  	alert(strLang);
+				  	
+				  	$("#id_user").css('background-color','Lime');
+
+				  	
+				  	// 内容の設定
+				  	$("#id_content").text(strLang);
+				  	$("#id_area").val(strLang);
+				  	
+			  });
+		});
+	
+
+	
+// 		alert('test');
+		
+// 		function testDom() {
+			
+		
+// 			var obj = document.getElementById("id_user");
+// // 			alert(obj.value);
+// // 			alert(document.getElementById("id_password").value);
+
+// // 			document.getElementById("id_content").innerText=obj.value
+// // 			+"\n"+document.getElementById("id_password").value;
+			
+// 			var content="user id:" + obj.value
+// 			+"<br>"+"password:" + document.getElementById("id_password").value;
+			
+// 			// div
+// 			document.getElementById("id_content").innerHTML=content;
+				
+// 			// textarea
+// 			document.getElementById("id_area").value=
+// 				"user id:" + obj.value+
+// 				"\n"
+// 				+"password:" + document.getElementById("id_password").value;
+			
+			
+			
+// 			// radiobtn
+// // 			var rdoObj = document.getElementsByName("nsex11");
+			
+// // 			var strSex="";
+// // 			for(var i=0; i<rdoObj.length; i++){
+// // 				if(rdoObj[i].checked == true) {
+// // 					strSex = rdoObj[i].value;
+// // 					break;
+// // 				}
+// // 			}
+// // 			alert(strSex);
+			
+// 			debugger;
+			
+// 			// checkBox
+// 			var lanObj = document.getElementsByName("lang");
+			
+// 			var strLan="";
+// 			for(var i=0; i<lanObj.length; i++){
+// 				if(lanObj[i].checked == true) {
+// 					strLan = strLan + lanObj[i].value+",";
+// 				}
+// 			}
+			
+// // 			str.substr( 開始位置, 文字数 );
+// 			strLan=strLan.substr(0,strLan.length-1);
+// 			alert(strLan);
+// 		}
+	</script>
+	
+	</head>
+	<body>
+	<div style="background-color: #acc8f8;">
+		<table >
+			<tr><td>user id</td><td><input id="id_user" type="text"></td></tr>
+			<tr><td style="font-size: small;">password</td><td>
+			<input  id="id_password" type="password"></td></tr>
+		</table>
+	</div>	
+
+	<div style="background-color: yellow">
+		birthday<input type="date">
+		<br>
+		sex  <label><input type="radio" value="1" checked="checked" name="nsex11" > man</label> 
+		<label><input type="radio" value="0" name="nsex11"> woman</label> 
+		<br>
+		外国語 <label><input type="checkbox" value="en" name="lang"> 英語</label> 
+		<label><input type="checkbox" value="jp" checked="checked" name="lang"> 日本語</label> 
+		<label><input type="checkbox" value="zh" checked="checked" name="lang"> 中国語</label> 
+		<br>
+		給料：
+		コンボボックス
+			<select name="salary">
+			    <option value="0" selected>--Please choose an option--</option>
+			    <option value="1">１１万～２０万</option>
+			    <option value="2" >２１万～３０万</option>
+			    <option value="3">３１万～４０万</option>
+			    <option value="4">４１万～５０万</option>
+			    <option value="5">５１万以上</option>
+			</select>
+		<br>
+		自己紹介
+		<textarea id="id_area" rows="3" cols="50"></textarea>
+	</div>
+
+		<input id="id_btn" type="button" value="TEST Jquery">
+		
+		<div id="id_content">
+			入力内容
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

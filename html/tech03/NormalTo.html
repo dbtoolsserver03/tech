@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+var params = new URLSearchParams(window.location.search);
+var str=params.get("userId") + "  " +  params.get("pwd")+ "  " +  params.get("userAge"); 
+
+function fun(){
+	document.getElementById("id_div").innerText = str;
+}
+
+
+
+</script>
+</head>
+<body onload=fun()>
+
+aaaaaaaaaaaaaaaaaa
+
+<hr>
+<hr>
+
+<div id="id_div"></div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
+	
+<title>HTML教室</title>
+<script type="text/javascript">
+
+function touroku(){
+	
+	var strUserId=document.getElementById("id_user").value;
+	var strPwd=document.getElementById("id_pwd").value;
+	
+	window.location = 'to.html?userId='+strUserId+'&pwd='+strPwd;
+}
+
+
+</script>
+	</head>
+
+	<body>
+	
+<!-- 	■get -->
+<!-- 		メリット： -->
+<!-- 			モック画面作成する場合、よく使います。 -->
+<!-- 		デメリット： -->
+<!-- 			制限あり -->
+<!-- 			セキュリティ低い -->
+		
+<!-- 	■post -->
+<!-- 		メリット： -->
+<!-- 			セキュリティ高い -->
+<!-- 			データ量制限なし -->
+<!-- 		デメリット： -->
+<!-- 			モック画面あまり使わない -->
+			
+<!-- 	FORM利用する場合、タグのname属性が必要です。 -->
+
+<!-- 	disableされたタグの内容を次画面にデータを渡せません。 -->
+<!-- 	hiddenタグの内容を次画面に渡せます。 -->
+
+	<form action="to.html" method="get">
+	<div style="background-color: #acc8f8;">
+		<table >
+			<tr><td>user id</td><td><input name="userId" id="id_user" type="text" disabled="disabled" value="田中"></td></tr>
+			<tr><td style="font-size: small;">password</td><td><input name="pwd" id="id_pwd" type="password"></td></tr>
+			<tr><td colspan="2" align="center">
+			<tr><td>user age</td><td><input name="userAge"  type="hidden" value="30"></td></tr>
+		
+			<tr><td><input type="button" value="登録 window.location" onclick="touroku()"></td></tr>
+		</table>
+	</div>	
+	<input type="submit" value="登録 form submit">
+	
+
+	
+	
+		<hr>
+	<div style="background-color: yellow">
+		birthday<input type="date">
+		<br>
+		sex  <label><input type="radio" checked="checked" name="nsex11" value="1" > man</label> 
+		<label><input type="radio" name="nsex11" value="0"> woman</label> 
+		
+		<br>
+		外国語 <label><input type="checkbox" name="lang" value="en"> 英語</label> 
+		<label><input type="checkbox" checked="checked" name="lang"  value="jp"> 日本語</label> 
+		<label><input type="checkbox" checked="checked" name="lang" value="zh"> 中国語</label> 
+
+		<br>
+		給料：
+		コンボボックス
+			<select name="salary">
+			    <option value="0" selected>--Please choose an option--</option>
+			    <option value="1">１１万～２０万</option>
+			    <option value="2" >２１万～３０万</option>
+			    <option value="3">３１万～４０万</option>
+			    <option value="4">４１万～５０万</option>
+			    <option value="5">５１万以上</option>
+			</select>
+		<br>
+		自己紹介
+		<textarea rows="3" cols="50"></textarea>
+<hr>
+		<a href="http://www.yahoo.co.jp">ホームページ</a>
+		<a href="./to.html">TO HTML</a>
+	</div>
+		<hr>
+		
+	</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>人事一覧</title>
+<link rel="shortcut icon" href="./images/log.jpg">
+</head>
+<body>
+<div align ="right">
+<script>
+        var inputValue = localStorage.saveKey;
+        document.write(inputValue);
+    </script>
+</div>
+<div style="background-color: aqua;" class="head">
+	<table width="100%">
+	<tbody>
+		<tr>
+			<td width ="5%"></td>
+			<td width =25%>
+				<div align="right">
+					<img src="./images/im.jpg" width="60" height ="60" alt="">
+				</div>
+			</td>
+			<td width ="50%">
+			<p align="center" style="color: gray;">人事システム</p>
+			</td>
+			<td width="25%" align="right">ログアウト</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+<div class="body" style="background-color: white;">
+	
+	<table width="100%">
+	<tr>
+		<td style="background: green;" width=20%>姓</td>
+		<td width=30%><input type="text" width="100%"></td>
+		<td style="background: green;" width=20%>名</td>
+		<td width=30%><input type="text" width="100%"></td>
+	</tr>
+	<tr>
+		<td style="background: green;" width=20%>電話番号</td>
+		<td width=30%><input type="text" width="100%"></td>
+		<td style="background: green;" width=20%>住所</td>
+		<td width=30%><input type="text" width="100%"></td>
+	</tr>
+	</table>
+</div>
+<div align="right">
+	<table>
+	<tr>
+		<td><input type="button" value="新規" style="background-color: red;"></td>
+		<td><input type="button" value="検索" style="background-color: red;"></td>
+	</tr>
+	</table>
+</div>
+
+</body>
+</html>
