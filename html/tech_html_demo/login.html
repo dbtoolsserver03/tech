@@ -11,6 +11,7 @@ $(document).ready(function(){
 	  $("#id_my_btn").click(function(){
 		  debugger;
 		  var userId = $("#id_user_id")[0].value;
+		  console.log("userId:"+userId);
 		  window.location = 'list.html?userId='+userId+'&result=notView';
 
 	  });
@@ -24,7 +25,7 @@ $(document).ready(function(){
 <a href="#">ユーザ新規</a>
 <br>
 </div>
-    
+
 <div class="background-color">
     <table width="100%">
         <tr>
